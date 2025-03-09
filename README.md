@@ -1,4 +1,7 @@
 # 🤖 Creosynth
+> [!NOTE]  
+> Project has been moved to an organisation to avoid its link being changed.
+
 This is a work-in-progress playbook for optimising Windows. 
 
 The project focuses on various multimedia creation by providing a quick & solid Windows experience + specific optimisations for creators.
@@ -11,9 +14,10 @@ The project focuses on various multimedia creation by providing a quick & solid 
 A fresh install is highly recommended.
 
 ## ⚙️ Installation instructions
-See [here](https://github.com/mewostick/Creosynth/wiki/Playbook-installation).
+> [!WARNING]  
+> Please review the source code or the Wiki to avoid making unwanted changes. Changes made by Creosynth are not easily revertable.
 
-Please review the source code or the Wiki to avoid making unwanted changes.
+See [here](https://github.com/mewostick/Creosynth/wiki/Playbook-installation).
 
 ## 📚 Learn about the playbook
 Everything important is on the [Wiki](https://github.com/mewostick/Creosynth/wiki).
