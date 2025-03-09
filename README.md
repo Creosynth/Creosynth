@@ -7,6 +7,7 @@ This is a work-in-progress playbook for optimising Windows.
 The project focuses on various multimedia creation by providing a quick & solid Windows experience + specific optimisations for creators.
 
 ## 🪟 OS Support
+- Windows 10 21H2 Pro/Enterprise/LTSC (64-bit)
 - Windows 10 22H2 Pro/Enterprise (64-bit)
 - Windows 11 23H2 Pro/Enterprise (64-bit)
 - Windows 11 24H2 Pro/Enterprise/LTSC (64-bit)
@@ -14,8 +15,11 @@ The project focuses on various multimedia creation by providing a quick & solid 
 A fresh install is highly recommended.
 
 ## ⚙️ Installation instructions
-> [!WARNING]  
-> Please review the source code or the Wiki to avoid making unwanted changes. Changes made by Creosynth are not easily revertable.
+> [!TIP]  
+> Please review the source code or the Wiki to avoid making unwanted changes.
+
+> [!CAUTION]
+> Changes made by Creosynth are not easily revertable.
 
 See [here](https://github.com/mewostick/Creosynth/wiki/Playbook-installation).
 

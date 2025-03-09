@@ -2,8 +2,8 @@ title: Changes in the Creosynth playbook
 description: Below you may see every change that will occur once you run the playbook.
 actions:
   # General tasks
-  - !writeStatus: {status: 'Debloating your OS'}
-  - !task: {path: 'Tasks\debloat.yml'}
+  - !writeStatus: {status: 'Debloating your OS', option: 'debloat-yes'}
+  - !task: {path: 'Tasks\debloat.yml', option: 'debloat-yes'}
   - !writeStatus: {status: 'Removing APPX bloat', option: 'remove-appx'}
   - !task: {path: 'Tasks\appx-debloat.yml', option: 'remove-appx'}
   - !writeStatus: {status: 'Removing Microsoft Store', option: 'store-yes'}
@@ -19,21 +19,21 @@ actions:
   - !task: {path: 'Tasks\Security\defender.yml', option: 'only-defender'}
   - !task: {path: 'Tasks\Security\other-security.yml', option: 'other-security'}
 
-  - !writeStatus: {status: 'Configuring services'}
-  - !task: {path: 'Tasks\services.yml'}
-  - !writeStatus: {status: 'Configuring Windows Update'}
-  - !task: {path: 'Tasks\updates.yml'}
-  - !writeStatus: {status: 'Improving your privacy'}
-  - !task: {path: 'Tasks\privacy.yml'}
-  - !writeStatus: {status: 'Applying QoL changes'}
-  - !task: {path: 'Tasks\qol.yml'}
-  - !writeStatus: {status: 'Optimising Windows'}
-  - !task: {path: 'Tasks\optimise.yml'}
+  - !writeStatus: {status: 'Configuring services', option: 'services-yes'}
+  - !task: {path: 'Tasks\services.yml', option: 'services-yes'}
+  - !writeStatus: {status: 'Configuring Windows Update', option: 'windows-update'}
+  - !task: {path: 'Tasks\updates.yml', option: 'windows-update'}
+  - !writeStatus: {status: 'Improving your privacy', option: 'privacy-yes'}
+  - !task: {path: 'Tasks\privacy.yml', option: 'privacy-yes'}
+  - !writeStatus: {status: 'Applying QoL changes', option: 'qol-yes'}
+  - !task: {path: 'Tasks\qol.yml', option: 'qol-yes'}
+  - !writeStatus: {status: 'Optimising Windows', option: 'optimise-yes'}
+  - !task: {path: 'Tasks\optimise.yml', option: 'optimise-yes'}
 
   # Installation tasks
   - !writeStatus: {status: 'Installing all VCRuntimes', option: 'vcruntimes'}
   - !task: {path: 'Tasks\vcruntimes.yml', option: 'vcruntimes'}
-  - !writeStatus: {status: 'Installing ZwTimerResolution', builds: ['>=22000']}
+  - !writeStatus: {status: 'Installing ZwTimerResolution', builds: ['>=22000'], option: zwtimerresolution}
   - !task: {path: 'Tasks\Software\zwt.yml', builds: ['>=22000'], option: zwtimerresolution}
   - !writeStatus: {status: 'Installing FlexASIO + Fluent', option: 'flexasio'}
   - !task: {path: 'Tasks\Software\flexasio.yml', option: 'flexasio'}

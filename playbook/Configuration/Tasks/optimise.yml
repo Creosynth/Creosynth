@@ -120,6 +120,7 @@ actions:
   - !service: 
     name: "SysMain" 
     startup: 4 
+    option: disable-prefetch-sysmain
 
     # turn off notifications from apps and senders
   - !registryValue:
@@ -236,6 +237,7 @@ actions:
     value: 'EnablePrefetcher'
     data: '0'
     type: REG_DWORD
+    option: disable-prefetch-sysmain
 
     # disable auto folder discovery
   - !registryValue:
@@ -388,19 +390,6 @@ actions:
     data: '2'
     type: REG_DWORD
 
-    # real time csrss.exe
-  - !registryValue:
-    path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions'
-    value: 'CpuPriorityClass'
-    data: '4'
-    type: REG_DWORD
-
-  - !registryValue:
-    path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions'
-    value: 'IoPriority'
-    data: '3'
-    type: REG_DWORD
-
     # IRQ0 + IRQ8 priority
   - !registryValue:
     path: 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl'
@@ -425,5 +414,11 @@ actions:
   - !cmd:
     command: '24H2-CPUFIX.bat'
     exeDir: true
+    wait: true
+    builds: [ '>=26100' ]
+
+    # disable VBS globally in 24H2
+  - !cmd:
+    command: 'bcdedit/set hypervisorlaunchtype off'
     wait: true
     builds: [ '>=26100' ]

@@ -282,47 +282,55 @@ actions:
     data: '1'
     type: REG_DWORD
 
-    # Disable win error reporting
+    # Disable win error reporting if chosen by the user
   - !registryValue:
     path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting'
     value: 'Disabled'
     data: '1'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting'
     value: 'DoReport'
     data: '0'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting'
     value: 'Disabled'
     data: '1'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting'
     value: 'DontShowUI'
     data: '1'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting'
     value: 'ShowUI'
     data: '0'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting'
     value: 'LoggingDisabled'
     data: '1'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting'
     value: 'DontSendAdditionalData'
     data: '1'
     type: REG_DWORD
+    option: disable-winerrorreporting
   - !registryValue:
     path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing'
     value: 'DisableWerReporting'
     data: '1'
     type: REG_DWORD
+    option: disable-winerrorreporting
 
     # Do not send a Windows error report when a generic driver is installed on a device
   - !registryValue:
